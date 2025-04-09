@@ -22,23 +22,7 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-package com.iluwatar.bloc;
+package com.iluwatar.publish.subscribe.model;
 
-import org.junit.jupiter.api.Test;
-
-import static org.mockito.Mockito.mockStatic;
-
-
-class MainTest {
-
-  @Test
-  void testMain() {
-    try (var mockedBlocUi = mockStatic(BlocUi.class)) {
-      // Call the main method
-      Main.main(new String[]{});
-
-      // Verify that createAndShowUi was called
-      mockedBlocUi.verify(() -> new BlocUi().createAndShowUi());
-    }
-  }
-}
+/** This class represents a Message that holds the published content. */
+public record Message(Object content) {}

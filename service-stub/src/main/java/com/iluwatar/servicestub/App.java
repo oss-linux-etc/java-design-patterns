@@ -1,3 +1,27 @@
+/*
+ * This project is licensed under the MIT license. Module model-view-viewmodel is using ZK framework licensed under LGPL (see lgpl-3.0.txt).
+ *
+ * The MIT License
+ * Copyright © 2014-2022 Ilkka Seppälä
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * THE SOFTWARE.
+ */
 package com.iluwatar.servicestub;
 
 import lombok.extern.slf4j.Slf4j;
@@ -14,11 +38,9 @@ import lombok.extern.slf4j.Slf4j;
  *
  * <p>The "real" sentiment analysis class simulates the processing time for the request by pausing
  * the execution of the thread for 5 seconds. In the stub sentiment analysis class the response is
- * immediate. In addition, the stub returns a deterministic output with regard to the input. This
- * is extra useful for testing purposes.
+ * immediate. In addition, the stub returns a deterministic output with regard to the input. This is
+ * extra useful for testing purposes.
  */
-
-
 @Slf4j
 public class App {
   /**
@@ -40,6 +62,5 @@ public class App {
     LOGGER.info("Analyzing input: {}", text);
     sentiment = stubSentimentAnalysisServer.analyzeSentiment(text);
     LOGGER.info("The sentiment is: {}", sentiment);
-
   }
 }
